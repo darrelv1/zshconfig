@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+arg=$1
+
+#collect the most recent file downloaded
+dl="/Users/macbook/Downloads"
+
+file=$(ls -t "$dl" | head -n 1)
+
+
+
+link="/Users/macbook/Library/Mobile Documents/com~apple~CloudDocs/documents/codeTransfer/JavaScript/UNIT"
+
+#copy the file on the javascript unit user selected
+cp  "$dl/$file" "$link$arg"
+
