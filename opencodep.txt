@@ -3,14 +3,16 @@
 
 arg=$1
 
+#dynamic- user link
+homepath="/Users/$USER"
+
 #collect the most recent file downloaded
-dl="/Users/macbook/Downloads"
+dl="${homepath}/Downloads"
 
 file=$(ls -t "$dl" | head -n 1)
 
 
-
-link="/Users/macbook/Library/Mobile Documents/com~apple~CloudDocs/documents/codeTransfer/JavaScript/UNIT"
+link="${homepath}/Library/Mobile Documents/com~apple~CloudDocs/documents/codeTransfer/JavaScript/UNIT"
 
 #copy the file on the javascript unit user selected
 cp  "$dl/$file" "$link$arg"

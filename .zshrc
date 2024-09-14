@@ -11,14 +11,21 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-export PATH="/usr/local/opt/postgresql@15/bin:/Users/macbook/opencode.txt:/Users/macbook:$PATH"
+home_path="/Users/$USER"
+export PATH="/usr/local/opt/postgresql@15/bin:/Users/macbook/opencode.txt:${home_path}:$PATH"
+
+
+
+#Variables
+#Creating a dynamic
+
 
 
 
 #ALIAS
 alias dl='cd ~/downloads'
-alias icloud='cd /Users/macbook/Library/Mobile\ Documents/com~apple~CloudDocs'
-alias js='cd "/Users/macbook/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codetransfer/JavaScript"'
+alias icloud="cd \"${home_path}/Library/Mobile Documents/com~apple~CloudDocs\""
+alias js="cd \"${home_path}/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codetransfer/JavaScript\""
 
 
 #Global Node Scripts
